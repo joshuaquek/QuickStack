@@ -6,6 +6,7 @@ export default (props) => (
     <Layout>
       <center>
         <h1>EXAMPLE_PAGE_ONE</h1>
+        <p>{JSON.stringify(props)}</p>
       </center>
     </Layout>
   </div>
