@@ -10,10 +10,8 @@
   },
   "private": true,
   "scripts": {
-    "build-server": "rimraf ./server/.next/;flow-remove-types --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
     "dev": "nodemon ./server/.next/server.js;",
-    "start": "next build client;npm run build-server;NODE_ENV=production node ./server/.next/server.js;",
-    "-------": "--------------------",
+    "start": "next build client;rimraf ./server/.next/;flow-remove-types --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;NODE_ENV=production node ./server/.next/server.js;",
     "flow": "flow"
   },
   "author": "Joshua Quek",
