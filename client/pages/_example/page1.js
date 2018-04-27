@@ -1,4 +1,4 @@
-import Layout from '../../components/layout'
+import Layout from '../../components/_example/layout'
 import Link from 'next/link'
 
 export default (props) => (
