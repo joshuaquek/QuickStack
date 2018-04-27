@@ -5,8 +5,7 @@ export default (props) => (
   <div>
     <Layout>
       <center>
-        <h1>EXAMPLE_PAGE_ONE</h1>
-        <p>{JSON.stringify(props)}</p>
+        <h1>This renders from {props.url.query.hmmmWhereIsThisRenderingFrom} with id of {props.url.query.someCoolId}</h1>
       </center>
     </Layout>
   </div>
