@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# QuickStart Build Folders
+.next
+server/.next
+client/.next
