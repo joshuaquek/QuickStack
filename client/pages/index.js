@@ -4,7 +4,7 @@ export default (props) => (
   <div>
     <Layout>
       <center>
-        <h1>Server is running!</h1>
+        <h1>Server is running!!</h1>
         <p>{JSON.stringify(props)}</p>
       </center>
     </Layout>

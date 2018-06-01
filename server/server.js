@@ -11,4 +11,4 @@ let startApp = async () => {
 }
 
 // Start / Initialise App !!
-startApp()
+startApp();

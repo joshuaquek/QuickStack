@@ -1,18 +1,27 @@
+
 # QuickStack
+
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 
 Production-grade NodeJS web application template built with:
 
-* React (Frontend)
+* React (Frontend Framework)
+* Semantic UI (Design Library)
 * NextJS (Routing)
 * Express (Server)
-* LokiJs (Server Cache)
+* LokiJS (Server Cache)
 * Permit (Authentication)
-* Mongo (Database)
+* Mongoose (MongoDB)
 
 ...which also uses:
 
 * Bluebird (More efficient than native Promise library)
 * FlowType (Better code governance during development)
+
 
 ## Getting Started
 
@@ -37,6 +46,13 @@ Running in production:
 npm start
 ```
 
+
+## To-do (Progress)
+
+* Integrate in Semantic UI
+* Integrate in LokiJS
+* Integrate in Permit
+* Integrate in Mongoose (MongoDB)
 
 
 ## Contributing
