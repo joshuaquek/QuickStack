@@ -1,7 +1,7 @@
 {
   "verbose": true,
   "ignore": ["node_modules", ".next"],
-  "watch": ["server/**/*", "server.js"],
+  "watch": ["server/**/*"],
   "ext": "js json",
   "exec": "npm run build-server; node ./server/.next/server.js;"
 }

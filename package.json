@@ -1,7 +1,7 @@
 {
   "name": "QuickStack",
   "version": "1.0.0",
-  "description": "Production-grade NodeJS web application template using - React (Frontend), NextJS (Routing), Express (Server), LokiJs(Shared Cache), Permit (Auth) and Mongo (Database)",
+  "description": "Production-grade NodeJS web application template using - React (Front-end), NextJS (Routing), Express (Back-end), LokiJs (Shared Cache), PassportJs (Auth) and Mongo (Database)",
   "repository": "https://github.com/joshuaquek/QuickStack.git",
   "main": "server.js",
   "engines": {
@@ -10,19 +10,23 @@
   },
   "private": true,
   "scripts": {
-    "build-server": "rimraf ./server/.next/;flow-remove-types --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
-    "dev": "nodemon ./server/.next/server.js;",
+    "--------": " ---------------- MAIN COMMANDS ---------------- ",
+    "build-server": "rimraf ./server/.next/;flow-remove-types --quiet --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
+    "dev": "nodemon -q -L ./server/.next/server.js; ##------- COMMENT: `npm run build-server` is run inside nodemon.json for dev -------##;",
     "start": "next build client;npm run build-server;NODE_ENV=production node ./server/.next/server.js;",
-    "flow": "flow"
+    "---------": " ---------------- DEVELOPER TOOLS ---------------- ",
+    "flow": "flow",
+    "package-versions": "npm list --depth=0"
   },
   "author": "Joshua Quek",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
-    "compression": "^1.7.2",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "next": "^5.1.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
@@ -31,7 +35,7 @@
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "flow-bin": "0.64.0",
     "flow-remove-types": "1.2.3",
-    "nodemon": "^1.17.3",
-    "rimraf": "^2.6.2"
+    "nodemon": "1.17.5",
+    "rimraf": "2.6.2"
   }
 }

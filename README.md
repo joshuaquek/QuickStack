@@ -11,10 +11,10 @@ Production-grade NodeJS web application template built with:
 
 * React (Frontend Framework)
 * Semantic UI (Design Library)
-* NextJS (Routing)
-* Express (Server)
-* LokiJS (Server Cache)
-* Permit (Authentication)
+* NextJs (Routing)
+* Express (Backend Framework)
+* LokiJs (Server Cache)
+* PassportJs (Authentication)
 * Mongoose (MongoDB)
 
 ...which also uses:
