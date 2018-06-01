@@ -1,8 +1,7 @@
-// // @flow
-// exports.init = function(server: any, app: any){
-//   const controller = require('./controller')
-//   // ---- ROUTES ----
-//   controller.exampleOne('/example_1/:someRandomStuffHere/:someCoolId', server, app)
-
-//   server.get('/login', controller.login(app) ) 
-// }
+// @flow
+exports.init = function (server: any, app: any) {
+    const controller = require('./controller')
+    // ---- ROUTES ----
+    server.post('/register', controller.register(app))
+    server.post('/login', controller.login(app))
+}
