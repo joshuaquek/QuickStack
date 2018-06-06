@@ -1,11 +1,11 @@
 exports.register = (app) => {
-    return (req, res) => {
-        
-    }
+  return (req, res) => {
+
+  }
 }
 
 exports.login = (app) => {
-    return (req, res) => {
-        
-    }
+  return (req, res) => {
+    
+  }
 }
