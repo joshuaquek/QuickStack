@@ -16,7 +16,7 @@ const Page = (props) => (
         <input value={user.name} onChange={onChange} />
         <div>Hello {user.name}!</div><br /><br />
 
-        <h2>Initial Data Fetch onComponentLoad Demo:</h2>
+        <h2>Initial API Data Fetch when component loads Demo:</h2>
         <div> Next stars: { props.stars }</div>
       </center>
     </Layout>
