@@ -1,5 +1,5 @@
 {
-  "name": "QuickStack",
+  "name": "quickstack",
   "version": "1.0.0",
   "description": "Production-grade NodeJS web application template using - React (Front-end), NextJS (Routing), Express (Back-end), LokiJs (Shared Cache), PassportJs (Auth) and Mongo (Database)",
   "repository": "https://github.com/joshuaquek/QuickStack.git",
@@ -32,11 +32,17 @@
     "react-dom": "^16.3.1"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.1",
+    "babel-eslint": "^8.2.1",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "eslint-plugin-flowtype": "^2.49.3",
     "flow-bin": "0.64.0",
     "flow-remove-types": "1.2.3",
     "nodemon": "1.17.5",
-    "rimraf": "2.6.2"
+    "rimraf": "2.6.2",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [ "flowtype" ]
   }
 }

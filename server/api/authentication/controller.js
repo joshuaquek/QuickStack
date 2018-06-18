@@ -6,6 +6,6 @@ exports.register = (app) => {
 
 exports.login = (app) => {
   return (req, res) => {
-    
+
   }
 }

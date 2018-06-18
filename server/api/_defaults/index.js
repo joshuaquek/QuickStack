@@ -1,6 +1,5 @@
 // @flow
 exports.init = function (server: any, app: any) {
-
   // All get endpoints will route through Next App Router
   const handle = app.getRequestHandler()
   server.get('*', (req, res) => {
@@ -13,5 +12,4 @@ exports.init = function (server: any, app: any) {
     if (err) throw err
     console.log(`> Ready on http://localhost:${port}`)
   })
-
-};
+}

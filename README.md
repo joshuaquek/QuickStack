@@ -5,13 +5,14 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Production-grade NodeJS web application template built with:
 
 * React (Frontend Framework)
 * Semantic UI (Design Library)
 * NextJs (Routing)
+* React-Easy-State (Frontend Reactive State)
 * Express (Backend Framework)
 * LokiJs (Server Cache)
 * PassportJs (Authentication)
@@ -51,8 +52,8 @@ npm start
 
 * Integrate in Semantic UI
 * Integrate in LokiJS
-* Integrate in Permit
 * Integrate in Mongoose (MongoDB)
+* Integrate in React-Easy-State
 
 
 ## Contributing

@@ -2,7 +2,7 @@ import { Bearer } from 'permit'
 
 const permit = new Bearer({
   basic: 'username', // Also allow a Basic Auth username as a token.
-  query: 'access_token', // Also allow an `?access_token=` query parameter.
+  query: 'access_token' // Also allow an `?access_token=` query parameter.
 })
 
 exports.authenticate = (req, res, next) => {
@@ -15,6 +15,7 @@ exports.authenticate = (req, res, next) => {
     return next(new Error(`Authentication required!`))
   }
 
+  let db
   // Perform your authentication logic however you'd like...
   db.users.findByToken(token, (err, user) => {
     if (err) return next(err)
@@ -30,5 +31,3 @@ exports.authenticate = (req, res, next) => {
     next()
   })
 }
-
-
