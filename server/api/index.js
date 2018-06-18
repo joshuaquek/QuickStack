@@ -5,4 +5,4 @@ exports.init = (server: any, app: any) => {
   require('./authentication').init(server, app)
   // -------------- Finally, always initialize the server with NextJS LAST ---------------
   require('./_defaults').init(server, app) // NextJS Default Route Handling, this should initialise LAST!
-};
+}
