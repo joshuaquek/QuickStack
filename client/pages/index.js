@@ -12,7 +12,7 @@ const Page = (props) => (
         <h1>This is an example page.</h1>
         <p>{JSON.stringify(props)}</p><br /><br />
 
-        <h2>Easy State Management Demo:</h2>
+        <h2>Easy State Store Management Demo:</h2>
         <input value={user.name} onChange={onChange} />
         <div>Hello {user.name}!</div><br /><br />
 
