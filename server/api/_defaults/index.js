@@ -3,6 +3,7 @@ exports.init = function (server: any, app: any) {
   // All get endpoints will route through Next App Router
   const handle = app.getRequestHandler()
   server.get('*', (req, res) => {
+    console.log(`> GET ${req.originalUrl}`)
     return handle(req, res)
   })
 
