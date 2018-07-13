@@ -11,10 +11,11 @@
   "private": true,
   "scripts": {
     "------------": " ------------------- MAIN COMMANDS ------------------- ",
-    "dev": "nodemon -q -L ./server/.next/server.js; \n\n\n##------- COMMENT: `npm run build-server` is run inside nodemon.json for dev -------##",
     "start": "npm run build-server; next build client; NODE_ENV=production node ./server/.next/server.js;",
+    "dev": "nodemon -q -L ./server/.next/server.js; \n\n\n##------- COMMENT: `npm run build-server` is run inside nodemon.json for dev -------##",
     "-------------": " ------------------- DEVELOPER TOOLS ------------------- ",
     "package-versions": "npm list --depth=0",
+    "--------------": " ------------------- HELPER SCRIPTS (DO NOT CHANGE) ------------------- ",
     "build-server": "rimraf ./server/.next/ ;rimraf ./client/.next/;flow-remove-types --quiet --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
     "flow": "flow"
   },
