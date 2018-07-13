@@ -1,6 +1,6 @@
 import { view, store } from 'react-easy-state'
 import axios from 'axios'
-import Layout from '../components/_example/layout'
+import Layout from '../../components/_example/layout'
 
 const user = store({ name: 'Bob' })
 const onChange = ev => (user.name = ev.target.value)

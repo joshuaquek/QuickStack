@@ -12,10 +12,10 @@
   "scripts": {
     "------------": " ------------------- MAIN COMMANDS ------------------- ",
     "dev": "nodemon -q -L ./server/.next/server.js; \n\n\n##------- COMMENT: `npm run build-server` is run inside nodemon.json for dev -------##",
-    "start": "next build client;npm run build-server;NODE_ENV=production node ./server/.next/server.js;",
+    "start": "npm run build-server; next build client; NODE_ENV=production node ./server/.next/server.js;",
     "-------------": " ------------------- DEVELOPER TOOLS ------------------- ",
     "package-versions": "npm list --depth=0",
-    "build-server": "rimraf ./server/.next/;flow-remove-types --quiet --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
+    "build-server": "rimraf ./server/.next/ ;rimraf ./client/.next/;flow-remove-types --quiet --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
     "flow": "flow"
   },
   "author": "Joshua Quek",
