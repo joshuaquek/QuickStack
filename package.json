@@ -10,9 +10,10 @@
   },
   "private": true,
   "scripts": {
-    "------------": " ------------------- MAIN COMMANDS ------------------- ",
-    "start": "rimraf ./client/.next/; next build client; NODE_ENV=production node ./server/.next/server.js;",
+    "------------": " ------------------- RUN IN PRODUCTION ------------------- ",
+    "start": "rimraf ./client/.next/; next build client; NODE_ENV=production node ./server/index.js;",
     "dev": "rimraf ./client/.next/; next build client; nodemon -q -L ./server/index.js;",
+    "build": "next build client",
     "-------------": " ------------------- DEVELOPER TOOLS ------------------- ",
     "package-versions": "npm list --depth=0",
     "--------------": " ------------------- HELPER SCRIPTS (DO NOT CHANGE) ------------------- "
