@@ -1,5 +1,5 @@
 // @flow
-exports.init = function (server: any, app: any) {
+exports.init = function (server, app) {
   // All get endpoints will route through Next App Router
   const handle = app.getRequestHandler()
   server.get('*', (req, res) => {

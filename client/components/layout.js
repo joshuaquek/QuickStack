@@ -3,12 +3,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-type Props = {
-  children?: React.Node,
-  title?: string
-}
-
-export default ({children, title = 'This is the default title'}: Props) => (
+export default ({children, title = 'This is the default title'}) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -19,9 +14,9 @@ export default ({children, title = 'This is the default title'}: Props) => (
       <nav>
         <Link prefetch href='/'><a>Home</a></Link>
         -----
-        <Link prefetch href='/_example/page1?hmmmWhereIsThisRenderingFrom=The Frontend &someCoolId= 99' as='/example_1/yoyo/42'><a>ExamplePageOneHere</a></Link>
+        <Link prefetch href='/page1?hmmmWhereIsThisRenderingFrom=The Frontend &someCoolId= 99' as='/example_1/yoyo/42'><a>ExamplePageOneHere</a></Link>
         -----
-        <Link prefetch href='/_example/page2' as='/examplePage2'><a>ExamplePageTwoHere</a></Link>
+        <Link prefetch href='/page2' as='/examplePage2'><a>ExamplePageTwoHere</a></Link>
       </nav>
     </header>
     {children}

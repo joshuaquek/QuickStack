@@ -3,5 +3,5 @@
   "ignore": ["node_modules", ".next"],
   "watch": ["server/**/*"],
   "ext": "js json",
-  "exec": "npm run build-server; node ./server/.next/server.js;"
+  "exec": "node ./server/index.js;"
 }

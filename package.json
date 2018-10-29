@@ -11,13 +11,11 @@
   "private": true,
   "scripts": {
     "------------": " ------------------- MAIN COMMANDS ------------------- ",
-    "start": "npm run build-server; next build client; NODE_ENV=production node ./server/.next/server.js;",
-    "dev": "nodemon -q -L ./server/.next/server.js; \n\n\n##------- COMMENT: `npm run build-server` is run inside nodemon.json for dev -------##",
+    "start": "rimraf ./client/.next/; next build client; NODE_ENV=production node ./server/.next/server.js;",
+    "dev": "rimraf ./client/.next/; next build client; nodemon -q -L ./server/index.js;",
     "-------------": " ------------------- DEVELOPER TOOLS ------------------- ",
     "package-versions": "npm list --depth=0",
-    "--------------": " ------------------- HELPER SCRIPTS (DO NOT CHANGE) ------------------- ",
-    "build-server": "rimraf ./server/.next/ ;rimraf ./client/.next/;flow-remove-types --quiet --pretty ./server/ --out-dir ./server/.next/ --ignore ./server/.next/;",
-    "flow": "flow"
+    "--------------": " ------------------- HELPER SCRIPTS (DO NOT CHANGE) ------------------- "
   },
   "author": "Joshua Quek",
   "license": "MIT",
@@ -29,25 +27,18 @@
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "mongoose": "^5.1.3",
-    "next": "^5.1.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "next": "^7.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-easy-state": "^5.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
-    "babel-plugin-transform-flow-strip-types": "6.22.0",
-    "eslint-plugin-flowtype": "^2.49.3",
-    "flow-bin": "0.64.0",
-    "flow-remove-types": "1.2.3",
     "nodemon": "1.17.5",
     "rimraf": "2.6.2",
     "standard": "^11.0.1"
   },
   "standard": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "flowtype"
-    ]
+    "parser": "babel-eslint"
   }
 }
