@@ -1,7 +1,7 @@
 {
   "name": "quickstack",
   "version": "1.0.0",
-  "description": "Production-grade NodeJS web application template using - React (Front-end), NextJS (Routing), Express (Back-end), LokiJs (Shared Cache), PassportJs (Auth) and Mongo (Database)",
+  "description": "Production-grade NodeJS web application template using - React (Front-end), NextJS (Routing), Express (Back-end), LokiJs (Shared Cache), PassportJs (Auth) and Knex (Database Connector)",
   "repository": "https://github.com/joshuaquek/QuickStack.git",
   "main": "server.js",
   "engines": {
@@ -10,19 +10,16 @@
   },
   "private": true,
   "scripts": {
-    "------------": " ------------------- RUN IN PRODUCTION ------------------- ",
     "start": "rimraf ./client/.next/; next build client; NODE_ENV=production node ./server/index.js;",
     "dev": "rimraf ./client/.next/; next build client; nodemon -q -L ./server/index.js;",
     "build": "next build client",
     "-------------": " ------------------- DEVELOPER TOOLS ------------------- ",
-    "package-versions": "npm list --depth=0",
-    "--------------": " ------------------- HELPER SCRIPTS (DO NOT CHANGE) ------------------- "
+    "package-versions": "npm list --depth=0"
   },
   "author": "Joshua Quek",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "bcrypt-nodejs": "0.0.3",
     "bluebird": "^3.5.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
