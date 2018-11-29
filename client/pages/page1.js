@@ -7,7 +7,7 @@ export default withRouter(
     return (<div>
       <Layout>
         <center>
-          <h1>This renders from {props.router.query.hmmmWhereIsThisRenderingFrom} with id of {props.router.query.someCoolId}</h1>
+          <h1>This renders from {props.router.query['render_location']} with id of {props.router.query['my_unique_id']}</h1>
         </center>
       </Layout>
     </div>

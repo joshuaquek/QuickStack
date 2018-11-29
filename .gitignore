@@ -65,3 +65,4 @@ client/.next
 .vscode
 
 # Other
+.DS_Store

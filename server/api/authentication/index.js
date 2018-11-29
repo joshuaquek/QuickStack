@@ -1,10 +1,12 @@
-// @flow
+const express = require('express')
 const controller = require('./controller')
-// const passportMiddleware = require('./helpers/passport')
+const router = express.Router({mergeParams: true})
+const protect = require(`${global.SERVER_ROOT}/services/passport/protect`) // Use this for routes that you need to protect
 
-exports.init = function (server, app) {
-  // ------------------ ROUTES ------------------
-  server.post('/register', controller.register(app))
-  // server.post('/login', passportMiddleware, controller.login(app))
-  // --------------------------------------------
-}
+router.post('/register', controller.register)
+router.post('/login', controller.login)
+
+// ----- Sample Protected Route Example -----
+router.post('/sample_protected_route', protect, controller.sampleProtectedRoute)
+
+module.exports = router
