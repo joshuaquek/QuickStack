@@ -8,7 +8,7 @@ exports.customLoggingFormat = function (tokens, req, res) {
     `${tokens.url(req, res)},`,
     `at ${chalk.yellow(tokens.date(req, res))}`,
     `from remote address ${chalk.white(tokens['remote-addr'](req, res))}`,
-    `${tokens.url(req, res).includes('/_next/') ? chalk.magenta('(Native NextJs Call)') : '(Custom API Call)'}`
+    `${tokens.url(req, res).includes('/_next/') || tokens.url(req, res).includes('/static/') ? chalk.magenta('(Native NextJs Call)') : chalk.cyan('(Custom API Call)')}`
   ].join(' ')
   return SIGNALE.info(logString)
 }

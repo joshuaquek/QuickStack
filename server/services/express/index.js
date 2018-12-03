@@ -6,9 +6,9 @@ const helmet = require('helmet')
 const cors = require('cors')
 const { expressSession } = require('./express_session_config')
 const { jsonSizeLimit, fileUploadSizeLimit } = require('./body_parser_config')
-const { customLoggingFormat } = require('./custom_logging_format')
+const { customLoggingFormat } = require('./custom_logging_config')
 
-module.exports = (routes) => {
+module.exports = (...routes) => { // Accepts indefinite number of Express Router objects, which will all be exposed later via server.use()
   const server = express()
   server.use(logger(customLoggingFormat)) // Use the maximum verbose level for logging
   server.use(compression()) // Use Compression for faster responses
@@ -20,6 +20,6 @@ module.exports = (routes) => {
   server.use(expressSession) // Enable storage of JWT locally temporarily
   server.use(passport.initialize()) // Use Passport middleware
   server.use(passport.session()) // Use Passport Session middleware
-  server.use(routes) // Use API routes passed in
+  for (let route of routes) server.use(route) // Iterate through and use all routes
   return server
 }
