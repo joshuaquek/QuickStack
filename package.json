@@ -41,7 +41,7 @@
     "test": "nyc ava --verbose                                                                                                                                                                           ",
     "travis-test": "nyc --reporter=html --reporter=text ava;                                                                                                                                             ",
     "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
-    "report-coverage": "nyc report --reporter=html --reporter=lcov > coverage.lcov && npx codecov                                                                                                        ",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov; ./node_modules/.bin/codecov;                                                                                                    ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
     "-------------------": "---------------------------------------------------- MISCELLANEOUS (Helpers for scripts above, not meant for calling) ------------------------------------------------------ ",
