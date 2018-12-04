@@ -38,7 +38,7 @@
     "--": "                                                                                                                                                                                              ",
     "------------------": " ----------------------------------------------------------------------- DEVELOPER TOOLS ------------------------------------------------------------------------------------ ",
     "build": "rimraf ./client/.next/; next build client;                                                                                                                                                 ",
-    "test": "nyc ava --verbose;                                                                                                                                                                          ",
+    "test": "nyc --reporter=html --reporter=text ava;                                                                                                                                                    ",
     "test:coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                       ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
