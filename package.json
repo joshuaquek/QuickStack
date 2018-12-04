@@ -39,7 +39,7 @@
     "------------------": " ----------------------------------------------------------------------- DEVELOPER TOOLS ------------------------------------------------------------------------------------ ",
     "build": "rimraf ./client/.next/; next build client;                                                                                                                                                 ",
     "test": "nyc ava --verbose;                                                                                                                                                                          ",
-    "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
+    "test:coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                       ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
     "-------------------": "---------------------------------------------------- MISCELLANEOUS (Helpers for scripts above, not meant for calling) ------------------------------------------------------ ",
