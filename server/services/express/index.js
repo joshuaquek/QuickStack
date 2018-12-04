@@ -20,6 +20,5 @@ module.exports = (...routes) => { // Accepts indefinite number of Express Router
   server.use(expressSession) // Enable storage of JWT locally temporarily
   server.use(passport.initialize()) // Use Passport middleware
   server.use(passport.session()) // Use Passport Session middleware
-  for (let route of routes) server.use(route) // Iterate through and use all routes
   return server
 }

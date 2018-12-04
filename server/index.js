@@ -18,6 +18,6 @@ switch (process.env.ARCHITECTURE) {
     require('./_architecture/microservice-api-server-backend-app')
     break
   default:
-    SIGNALE.fatal(`Environmantal variable ${chalk.yellow('ARCHITECTURE')} has not been defined in your start script. ${chalk.red('Shutting down now.')}`)
+    SIGNALE.fatal(`Environmental variable ${chalk.yellow('ARCHITECTURE')} has not been defined in your start script. ${chalk.red('Shutting down now.')}`)
     break
 }
