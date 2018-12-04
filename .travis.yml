@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - "node"
   - "lts/*"
+  - "10"
+  - "9"
   - "8"
-script: "npm run-script test"
+script: "npm run-script travis-test"
 after_success: "npm run coverage"
