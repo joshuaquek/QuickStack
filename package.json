@@ -38,7 +38,9 @@
     "--": "                                                                                                                                                                                              ",
     "------------------": " ----------------------------------------------------------------------- DEVELOPER TOOLS ------------------------------------------------------------------------------------ ",
     "build": "rimraf ./client/.next/; next build client;                                                                                                                                                 ",
-    "package-versions": "npm list --depth=0                                                                                                                                                              ",
+    "test": "nyc ava --verbose;                                                                                                                                                                          ",
+    "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
+    "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
     "-------------------": "---------------------------------------------------- MISCELLANEOUS (Helpers for scripts above, not meant for calling) ------------------------------------------------------ ",
     "microsvcs-nextjs-dev": "pm2 delete nextjs-dev; NODE_ENV=development ARCHITECTURE=nextjs-microservice pm2 start --name nextjs-dev --watch --ignore-watch 'session_store' ./server/index.js;          ",
@@ -46,7 +48,7 @@
     "microsvcs-nextjs-prod": "pm2 delete nextjs-prod; NODE_ENV=production ARCHITECTURE=nextjs-microservice pm2 start --name nextjs-prod ./server/index.js;                                               ",
     "microsvcs-api-server-prod": "pm2 delete api-server-prod; ARCHITECTURE=api-server-microservice pm2 start --name api-server-prod ./server/index.js;                                                   ",
     "------------": "                                                                                                                                                                                    ",
-    "-----------------" : "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+    "-----------------": "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
   },
   "author": "Joshua Quek",
   "license": "MIT",
@@ -80,8 +82,11 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "ava": "1.0.0-rc.2",
     "babel-eslint": "^8.2.6",
+    "coveralls": "^3.0.2",
     "nodemon": "^1.18.7",
+    "nyc": "^13.1.0",
     "rimraf": "2.6.2",
     "standard": "^11.0.1"
   },
