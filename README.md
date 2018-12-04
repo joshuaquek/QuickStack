@@ -10,7 +10,16 @@
 
 Production-grade NodeJS webapp template.
 
-Requires a unix-based shell to run in.
+## Pre Setup
+
+Install NPM modules:
+```bash
+npm install
+```
+
+## Running
+
+Please refer to `package.json` for the various startup scripts to run, based on your desired architecture.
 
 ## Contributing
 
