@@ -5,5 +5,7 @@ node_js:
   - "10"
   - "9"
   - "8"
-script: "npm run-script travis-test"
+script:
+- npm run travis-test
+- npm run report-coverage
 after_success: "npm run coverage"

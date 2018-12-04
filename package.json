@@ -41,6 +41,7 @@
     "test": "nyc ava --verbose                                                                                                                                                                           ",
     "travis-test": "nyc --reporter=html --reporter=text ava;                                                                                                                                             ",
     "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov;                                                                                                                      ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
     "-------------------": "---------------------------------------------------- MISCELLANEOUS (Helpers for scripts above, not meant for calling) ------------------------------------------------------ ",
@@ -85,6 +86,7 @@
   "devDependencies": {
     "ava": "1.0.0-rc.2",
     "babel-eslint": "^10.0.1",
+    "codecov": "^3.1.0",
     "coveralls": "^3.0.2",
     "nodemon": "^1.18.7",
     "nyc": "^13.1.0",
