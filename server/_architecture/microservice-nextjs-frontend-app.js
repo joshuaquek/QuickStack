@@ -22,7 +22,7 @@ const startApp = async () => {
   const port = process.env.FRONTEND_NEXTJS_APP_PORT || 7501 // Integer value - Defaults to 7501 if FRONTEND_NEXTJS_APP_PORT is not set in your ".env" file
   server.listen(port, (error) => { // Start server to listen on specified port
     if (error) throw error
-    SIGNALE.start(`Server started on ${chalk.white(os.hostname())} - ${chalk.cyan(`http://localhost:${port}`)}`)
+    SIGNALE.start(`Server started on ${chalk.white(os.hostname())} in ${chalk.yellow(process.env.NODE_ENV || 'development')} mode - ${chalk.cyan(`http://localhost:${port}`)}`)
   })
 }
 

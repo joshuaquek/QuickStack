@@ -24,7 +24,7 @@ const startApp = async () => {
   const port = process.env.MONOLITH_APP_PORT || 8080 // Integer value - Defaults to 8080 if MONOLITH_APP_PORT is not set in your ".env" file
   server.listen(port, (error) => { // Start server to listen on specified port
     if (error) throw error
-    SIGNALE.start(`Server started on ${chalk.white(os.hostname())} - ${chalk.cyan(`http://localhost:${port}`)}`)
+    SIGNALE.start(`Server started on ${chalk.white(os.hostname())} in ${chalk.yellow(process.env.NODE_ENV || 'development')} mode - ${chalk.cyan(`http://localhost:${port}`)}`)
   })
 }
 
