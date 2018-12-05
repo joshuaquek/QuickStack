@@ -50,7 +50,7 @@
     "microsvcs-nextjs-prod": "pm2 delete nextjs-prod; NODE_ENV=production ARCHITECTURE=nextjs-microservice pm2 start --name nextjs-prod ./server/index.js;                                               ",
     "microsvcs-api-server-prod": "pm2 delete api-server-prod; ARCHITECTURE=api-server-microservice pm2 start --name api-server-prod ./server/index.js;                                                   ",
     "------------": "                                                                                                                                                                                    ",
-    "-----------------": "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+    "-----------------": "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
   },
   "author": "Joshua Quek",
   "license": "MIT",
