@@ -40,7 +40,7 @@
     "build": "rimraf ./client/.next/; next build client;                                                                                                                                                 ",
     "test": "nyc ava --verbose                                                                                                                                                                           ",
     "travis-test": "nyc --reporter=html --reporter=text ava;                                                                                                                                             ",
-    "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls                                                                                                                             ",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov; ./node_modules/.bin/codecov;                                                                                                    ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
