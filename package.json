@@ -40,8 +40,7 @@
     "build": "rimraf ./client/.next/; next build client;                                                                                                                                                 ",
     "test": "nyc ava --verbose                                                                                                                                                                           ",
     "test-travis": "nyc --reporter=html --reporter=text ava;                                                                                                                                             ",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls                                                                                                                             ",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov; ./node_modules/.bin/codecov;                                                                                                    ",
+    "coverage": "nyc report --reporter=text-lcov | coveralls;                                                                                                                                            ",
     "package-versions": "npm list --depth=0;                                                                                                                                                             ",
     "-----------": "                                                                                                                                                                                     ",
     "-------------------": "---------------------------------------------------- MISCELLANEOUS (Helpers for scripts above, not meant for calling) ------------------------------------------------------ ",
@@ -91,7 +90,8 @@
     "nodemon": "^1.18.7",
     "nyc": "^13.1.0",
     "rimraf": "2.6.2",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "tape": "^4.9.1"
   },
   "standard": {
     "parser": "babel-eslint"
