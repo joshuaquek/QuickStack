@@ -5,6 +5,4 @@ node_js:
   - "10"
   - "9"
   - "8"
-script: "npm run test-travis"
-# Send coverage data to Coveralls
-after_success: npm run coverage
+# script: "npm run test"

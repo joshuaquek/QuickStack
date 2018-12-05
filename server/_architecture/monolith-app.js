@@ -16,7 +16,7 @@ const startApp = async () => {
   global.NEXT_APP = nextApp // This sets the NEXT_APP as a global NodeJs variable to be accessible anywhere in your webapp
 
   const server = expressService() // Lets ExpressJs expose and handle these API routes
-  const apiRoutes = require('../api') // Regular API routes to be exposed
+  const apiRoutes = require(`../api`) // Regular API routes to be exposed
   const nextJsSsrApiRoutes = require('../nextjs') // NextJs Server Side Rendering custom API routes to be handled
   server.use(apiRoutes) // First use the regular API routes
   server.use(`${process.env.NEXT_JS_BASE_URL || '/'}`, nextJsSsrApiRoutes) // After this, include in the NextJs routes
