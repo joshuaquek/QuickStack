@@ -5,7 +5,6 @@ node_js:
   - "10"
   - "9"
   - "8"
-script:
-- npm run travis-test
-# - npm run report-coverage
-after_success: "npm run coverage"
+script: "npm run-script test-travis"
+# Send coverage data to Coveralls
+after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
