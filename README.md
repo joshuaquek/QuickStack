@@ -22,4 +22,4 @@ Please refer to `package.json` for the various startup scripts to run, based on 
 
 ## Contributing
 
-In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
+In lieu of a formal style guide, take care to maintain the existing coding style. Currently, we are using StandardJS for maintaining the coding style.
