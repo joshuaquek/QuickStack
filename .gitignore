@@ -68,3 +68,4 @@ client/.next
 # Other
 .DS_Store
 session-store.db
+README_PRIVATE.md
