@@ -19,6 +19,8 @@ npm install
 The backend user management and authentication relies on PostgresDB. You can install it here:
 https://www.postgresql.org/
 
+If you intend to only run the frontend microservice (NextJS), then PostgresDB is not required.
+
 ## Running
 
 Please refer to `package.json` for the various startup scripts to run, based on your desired architecture.
