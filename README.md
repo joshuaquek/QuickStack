@@ -16,6 +16,9 @@ Install NPM modules:
 npm install
 ```
 
+The backend user management and authentication relies on PostgresDB. You can install it here:
+https://www.postgresql.org/
+
 ## Running
 
 Please refer to `package.json` for the various startup scripts to run, based on your desired architecture.
