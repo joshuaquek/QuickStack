@@ -3,10 +3,14 @@ const SIGNALE = require('signale') // Used for more readable CLI Logging
 const chalk = require('chalk') // Used for more readable CLI Logging
 
 // -------- Packages --------
-const expressService = require(`${global.SERVER_ROOT}/services/express`)
 const os = require('os')
 
-// -------- App Initialisation Method --------
+// -------- Services --------
+const { postgresService } = require(`${global.SERVER_ROOT}/services/postgresdb`)
+const { expressService } = require(`${global.SERVER_ROOT}/services/express`)
+
+// -------- App Initialisation --------
+postgresService() // Initialises PostgresDB Schema and Tables if they do not exist
 const server = expressService() // Lets ExpressJs expose and handle these API routes
 const apiRoutes = require('../api') // API routes to be exposed
 server.use(apiRoutes) // Let ExpressJs use the API routes

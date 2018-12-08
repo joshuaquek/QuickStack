@@ -8,7 +8,7 @@ const { expressSession } = require('./express_session_config')
 const { jsonSizeLimit, fileUploadSizeLimit } = require('./body_parser_config')
 const { customLoggingFormat } = require('./custom_logging_config')
 
-module.exports = (...routes) => { // Accepts indefinite number of Express Router objects, which will all be exposed later via server.use()
+exports.expressService = () => { // Accepts indefinite number of Express Router objects, which will all be exposed later via server.use()
   const server = express()
   server.use(logger(customLoggingFormat)) // Use the maximum verbose level for logging
   server.use(compression()) // Use Compression for faster responses

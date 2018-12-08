@@ -3,7 +3,7 @@ const SIGNALE = require('signale') // Used for more readable CLI Logging
 const chalk = require('chalk') // Used for more readable CLI Logging
 
 // -------- Packages --------
-const expressService = require(`${global.SERVER_ROOT}/services/express`)
+const { expressService } = require(`${global.SERVER_ROOT}/services/express`)
 const next = require('next')
 const os = require('os')
 
