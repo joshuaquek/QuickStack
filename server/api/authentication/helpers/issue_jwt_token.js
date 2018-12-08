@@ -1,3 +1,4 @@
+const Promise = require('bluebird')
 const jwt = require('jsonwebtoken')
 
 // Exported Method Description: Generates a JWT token using a given User Object (`id, email, password_hash, first_name, last_name ` attributes)

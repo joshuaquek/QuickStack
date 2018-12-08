@@ -1,4 +1,4 @@
-
+const Promise = require('bluebird')
 const knex = require(`${global.SERVER_ROOT}/services/knex`)
 const { UserNotFoundAuthError, PasswordIncorrectAuthError } = require(`${global.SERVER_ROOT}/services/response/errortypes`)
 const bcrypt = require('bcryptjs')

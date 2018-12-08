@@ -1,3 +1,4 @@
+const Promise = require('bluebird')
 const SIGNALE = require('signale')
 const chalk = require('chalk')
 const knex = require(`${global.SERVER_ROOT}/services/knex`)

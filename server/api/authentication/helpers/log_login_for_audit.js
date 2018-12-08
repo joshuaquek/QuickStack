@@ -5,6 +5,7 @@ const chalk = require('chalk') // Used for more readable CLI Logging
 // ------- Other essential packages -------
 const knex = require(`${global.SERVER_ROOT}/services/knex`)
 const uuidv4 = require('uuid/v4')
+const Promise = require('bluebird')
 
 module.exports = (jwtToken, userId, userEmail, firstName, lastName, userGroupId) => {
   return new Promise(async (resolve, reject) => {

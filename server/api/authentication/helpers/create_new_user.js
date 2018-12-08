@@ -1,3 +1,4 @@
+const Promise = require('bluebird')
 const knex = require(`${global.SERVER_ROOT}/services/knex`)
 const bcrypt = require('bcryptjs')
 const uuidv4 = require('uuid/v4')
