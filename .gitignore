@@ -59,7 +59,6 @@ typings/
 .env
 
 # QuickStart Build Folders
-server/.next
 client/.next
 
 # Code Editors

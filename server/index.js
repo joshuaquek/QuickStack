@@ -1,7 +1,6 @@
 // -------- Essesntial Startup Stuff --------
-require('dotenv-safe').config()
 global.SERVER_ROOT = require('path').resolve(__dirname) // Set global.serverRootPath to be the absolute root path of where this index.js is located
-global.Promise = require('bluebird') // Override native Promise library. More performant than native Promises
+require('dotenv-safe').config()
 
 // ------- Packages -------
 const SIGNALE = require('signale') // Used for more readable CLI Logging
