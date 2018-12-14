@@ -27,19 +27,19 @@ const strategy = new Strategy(options, async ({ id }, next) => {
     let queriedCachedUser = USERS.find({ id: id })[0]
     if (queriedCachedUser) {
       delete queriedCachedUser['$loki'] // Remove redundant '$loki' metadata created by caching library.
-      SIGNALE.info(chalk.blue('JWT Verification: User successfully retrieved from Cache for JWT verification'), '\n', chalk.gray(JSON.stringify(queriedCachedUser, null, 2)))
+      // SIGNALE.info(chalk.blue('JWT Verification: User successfully retrieved from Cache for JWT verification'), '\n', chalk.gray(JSON.stringify(queriedCachedUser, null, 2))) // UNCOMMENT THIS FOR MORE VERBOSE
       return next(null, queriedCachedUser)
     } else {
       // ------- Query from DB since its not in the cache -------
       let result = await knex.raw(`
-        SELECT id, email, first_name, last_name 
+        SELECT id, email, first_name, last_name, user_group_id 
         FROM "${global.POSTGRES_SCHEMA}"."users"
         WHERE id = ?;
       `, [id]) // Query for user based on ID
       let queriedPostgresUser = result.rows[0] // Store queried user into varible for readability
       if (queriedPostgresUser) USERS.insert(queriedPostgresUser) // If queried user exists, add to USERS cache
       if (queriedPostgresUser) {
-        SIGNALE.info(chalk.blue('JWT Verification: User successfully retrieved from PostgresDB for JWT verification'), '\n', chalk.gray(JSON.stringify(queriedPostgresUser, null, 2)))
+        // SIGNALE.info(chalk.blue('JWT Verification: User successfully retrieved from PostgresDB for JWT verification'), '\n', chalk.gray(JSON.stringify(queriedPostgresUser, null, 2))) // UNCOMMENT THIS FOR MORE VERBOSE
         return next(null, queriedPostgresUser) // If queried user exists, use next() callback and terminate using Return
       }
       SIGNALE.info(chalk.red('JWT Verification: User not found in PostgresDB or in Cache'), '\n', chalk.gray(JSON.stringify(queriedCachedUser, null, 2)))

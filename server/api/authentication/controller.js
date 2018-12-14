@@ -26,7 +26,8 @@ exports.register = async (req, res, next) => {
       'uuid': newUser['id'],
       'email': newUser['email'],
       'first_name': newUser['first_name'],
-      'last_name': newUser['last_name']
+      'last_name': newUser['last_name'],
+      'user_group_uuid': newUser['user_group_id']
     })
     // ----------------------------------
   } catch (error) {
@@ -38,7 +39,7 @@ exports.register = async (req, res, next) => {
 exports.login = async (req, res, next) => {
   try {
     await validateLogin(req) // Validate the request object
-    let userObject = await loginUser(req) // Value will be User Object (`id, email, password_hash, first_name, last_name` attributes) if email and password is correct. Else this line will throw an error.
+    let userObject = await loginUser(req) // Value will be User Object (`id, email, password_hash, first_name, last_name, user_group_id ` attributes) if email and password is correct. Else this line will throw an error.
     let jwtToken = await issueJwtToken(userObject) // Create the JWT Token using the User Object
     await logLoginForAudit(jwtToken, userObject['id'], userObject['email'], userObject['first_name'], userObject['last_name'], userObject['user_group_id'])
     return respond.success(res, {
@@ -47,6 +48,8 @@ exports.login = async (req, res, next) => {
       'email': userObject['email'],
       'first_name': userObject['first_name'],
       'last_name': userObject['last_name'],
+      'user_group_uuid': userObject['user_group_id'],
+      'user_group_name': userObject['user_group_name'],
       'profile_url': 'https://i.imgur.com/SRKQ4e1.png' // NOTE: CHANGE THIS IN THE FUTURE
     }) // Respond with JWT Token if successful
   } catch (error) {
