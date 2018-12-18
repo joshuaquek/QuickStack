@@ -14,6 +14,7 @@
     "------": "                                                                                                                                                                                          ",
     "-------": "                                                                                                                                                                                         ",
     "-------------": " -------------------------------------------------------------------- START WHOLE STACK AS MONOLITH ------------------------------------------------------------------------------ ",
+    "linux": "docker build -t quickstack .;  docker run -it --rm --name my-running-monolith quickstack ;                                                                                                 ",
     "dev": "rimraf ./client/.next/; next build client; NODE_ENV=development ARCHITECTURE=monolith nodemon -q -L ./server/index.js;                                                                       ",
     "staging": "rimraf ./client/.next/; next build client; NODE_ENV=production ARCHITECTURE=monolith node ./server/index.js;                                                                             ",
     "prod": "rimraf ./client/.next/; next build client; pm2 delete quickstack-monolith; NODE_ENV=production ARCHITECTURE=monolith pm2 start --name quickstack-monolith ./server/index.js;                ",
