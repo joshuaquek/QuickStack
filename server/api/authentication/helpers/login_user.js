@@ -10,6 +10,7 @@ module.exports = (req) => {
       let userResult = await isUserCorrect(req.body.email) // This line will throw an Error object if user is not found
       let passwordResult = await isPasswordCorrect(req.body.password, userResult['password_hash']) // This line will throw an Error object if password is incorrect
       await appendUserGroupName(userResult) // Returns User Group so that we can allow Admins only to access the File Management API endpoints
+      removePasswordHash(userResult)
       return passwordResult ? resolve(userResult) : reject(new PasswordIncorrectAuthError()) // Resolves user data (`id, email, password_hash, first_name, last_name, user_group_id ` attributes) if email is correct and respective password is correct. Rejects false if either email or password is incorrect.
     } catch (error) {
       return reject(error) // Rejects an Error object.
@@ -67,4 +68,8 @@ function appendUserGroupName (userObject) {
       reject(error)
     }
   })
+}
+
+function removePasswordHash (userResult) {
+  delete userResult['password_hash']
 }
