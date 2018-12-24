@@ -25,7 +25,5 @@ function isTokenExpired (req, res) {
   let unwrappedJwt = jwtDecode(jwt)
   let expiryDate = new Date(unwrappedJwt.exp * 1000)
   let nowDate = new Date(moment().tz('Asia/Singapore'))
-  console.log(`Expiry is ${moment(expiryDate).format('YYYY/MM/DD HH:mm:ss')}`)
-  console.log(`Current Datetime is ${moment(nowDate).format('YYYY/MM/DD HH:mm:ss')}`)
   return (nowDate > expiryDate)
 }

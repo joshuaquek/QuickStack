@@ -14,7 +14,7 @@ function Page ({ myIpAddress }) {
     <div>
       <Layout>
         <center>
-          <h1>This is an example page </h1>
+          <h1>This is an example page</h1>
 
           <h2>React Easy State - Global State Management Demo:</h2>
           <input value={user.name} onChange={onChangeName} />
