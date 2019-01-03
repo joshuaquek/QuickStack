@@ -1,6 +1,6 @@
 {
   "verbose": true,
   "ignore": ["node_modules", ".next", "session-store.db"],
-  "watch": ["server/**/*", "index.js"],
+  "watch": ["server/**/*", "cross-env NODE_ENV=development index.js"],
   "ext": "js json"
 }

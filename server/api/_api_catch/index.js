@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router({mergeParams: true}) // Allows for nested routers to use any :id belonging to a parent router
+const router = express.Router({ mergeParams: true }) // Allows for nested routers to use any :id belonging to a parent router
 const controller = require('./controller')
 
 // Health Status Check

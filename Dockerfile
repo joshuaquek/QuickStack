@@ -11,5 +11,6 @@ COPY . /app
 # Ports to expose to local machine
 EXPOSE 8080 7501 9001
 
-# Place the NPM script that you want to run over here:
-RUN npm run staging
+# In your host machine, here is an example below:
+# npm run linux -- "npm run prod"
+CMD []

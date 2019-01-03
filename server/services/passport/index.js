@@ -12,7 +12,7 @@ const knex = require(`${global.SERVER_ROOT}/services/knex`)
 // ------- LokiJs as a cache to reduce DB calls -------
 const Loki = require('lokijs') // Used for temporary caching, and clears when the server restarts
 const cache = new Loki('users-cache-for-jwt.db') // Create temporary cache upon initialisation
-const USERS = cache.addCollection('users', {clone: true, disableMeta: true})
+const USERS = cache.addCollection('users', { clone: true, disableMeta: true })
 
 // ------- Options for getting and parsing JWT Token -------
 const options = {

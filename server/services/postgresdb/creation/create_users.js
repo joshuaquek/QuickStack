@@ -10,11 +10,11 @@ module.exports = () => {
         CREATE TABLE IF NOT EXISTS "${global.POSTGRES_SCHEMA}"."${tablename}" (
             id                uuid PRIMARY KEY,
             email             text NOT NULL UNIQUE,
-            password_hash      text NOT NULL,
+            password_hash     text NOT NULL,
             first_name        text NOT NULL,
             last_name         text NOT NULL,
             user_group_id     uuid NOT NULL,
-            created_at        timestamp default CURRENT_TIMESTAMP
+            created_at        timestamp default CURRENT_TIMESTAMP(3)
         );
       `).catch((error) => { throw error })
     SIGNALE.success(`${chalk.cyan(tablename)} table loaded successfully`)

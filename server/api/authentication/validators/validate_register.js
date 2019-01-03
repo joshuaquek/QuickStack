@@ -1,4 +1,3 @@
-
 const Joi = require('joi')
 
 // Exported Method Description: Validates whether the incoming request body fulfils certain conditions.

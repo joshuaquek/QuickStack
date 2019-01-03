@@ -1,6 +1,7 @@
 require('dotenv-safe')
+const withCSS = require('@zeit/next-css') // This enables us to use CSS by doing --> import "./thefile.css"
 
-module.exports = {
+module.exports = withCSS({
   // assetPrefix: process.env.NEXT_JS_BASE_URL || undefined,
   assetPrefix: process.env.NEXT_JS_BASE_URL || '/',
   publicRuntimeConfig: { // Will be available on both server and client
@@ -13,4 +14,4 @@ module.exports = {
     }
     return config
   }
-}
+})
