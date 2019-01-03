@@ -1,0 +1,7 @@
+.cnc-halfpage {
+  height: 33vh;
+}
+
+.cnc-scrollable {
+  overflow:scroll;
+}

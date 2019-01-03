@@ -1,6 +1,6 @@
 const express = require('express')
 const controller = require('./controller')
-const router = express.Router({mergeParams: true})
+const router = express.Router({ mergeParams: true })
 const protect = require(`${global.SERVER_ROOT}/services/passport/protect`) // Use this for routes that you need to protect
 
 router.post('/register', controller.register)

@@ -2,7 +2,7 @@
 global.SERVER_ROOT = require('path').resolve(__dirname) // Set global.serverRootPath to be the absolute root path of where this index.js is located
 require('dotenv-safe').config()
 
-// ------- Packages -------
+// -------- Packages --------
 const SIGNALE = require('signale') // Used for more readable CLI Logging
 const chalk = require('chalk') // Used for more readable CLI Logging
 
@@ -15,6 +15,9 @@ switch (process.env.ARCHITECTURE) {
     break
   case 'api-server-microservice':
     require('./_architecture/microservice-api-server-backend-app')
+    break
+  case 'microservice':
+    require('./_architecture/microservice')
     break
   default:
     SIGNALE.fatal(`Environmental variable ${chalk.yellow('ARCHITECTURE')} has not been defined in your start script. ${chalk.red('Shutting down now.')}`)
