@@ -75,7 +75,7 @@
     "lodash": "^4.17.11",
     "lokijs": "^1.5.5",
     "moment": "^2.23.0",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.25",
     "morgan": "^1.9.1",
     "next": "^7.0.2",
     "passport": "^0.4.0",
