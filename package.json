@@ -91,7 +91,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-plugin-root-import": "^6.1.0",
     "cross-env": "^5.2.0",
     "nodemon": "^1.18.9",
