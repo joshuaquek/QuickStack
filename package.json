@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "babel-plugin-root-import": "^6.1.0",
+    "babel-plugin-root-import": "6.2.0",
     "cross-env": "^5.2.0",
     "nodemon": "^1.18.9",
     "pm2": "^3.2.4",
