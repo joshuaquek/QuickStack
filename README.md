@@ -10,6 +10,8 @@
 
 This was a side project of mine in 2018, and no major changes were made since then.
 
+A frontend webapp & backend microservice template that can be run as a single monolith or as separate webapps/microservices.
+
 Original Repo: https://github.com/joshuaquek/QuickStack
 
 ## Setup
