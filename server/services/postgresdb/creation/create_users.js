@@ -1,10 +1,11 @@
 const SIGNALE = require('signale')
 const chalk = require('chalk')
-const knex = require(`${global.SERVER_ROOT}/services/knex`)
+const getKnex = require(`${global.SERVER_ROOT}/services/knex`)
 
 module.exports = () => {
 // ---- Initialize table if it doesnt exist. ----
   setTimeout(async () => { // setTimeout(callback, 0) ensures that this table is created asynchronously
+    let knex = await getKnex()
     let tablename = 'users'
     await knex.raw(`
         CREATE TABLE IF NOT EXISTS "${global.POSTGRES_SCHEMA}"."${tablename}" (

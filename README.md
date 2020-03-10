@@ -9,6 +9,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) 
 
 Production-grade NodeJS webapp template.
+Original Repo: https://github.com/joshuaquek/QuickStack
 
 ## Pre Setup
 
@@ -25,6 +26,9 @@ If you intend to only run the frontend microservice (NextJS), then PostgresDB is
 ## Running
 
 Please refer to `package.json` for the various startup scripts to run, based on your desired architecture.
+
+## Pending Features
+- Migrate to SCSS instead of CSS
 
 ## Contributing
 
