@@ -26,7 +26,7 @@ If you intend to only run the frontend microservice (NextJS), then PostgresDB is
 
 Next, create a `.env` file inside your directory. You can use the following sample that will work on localhost:
 
-```
+```bash
 # ARCHITECTURE= <-- This is defined in your start script and would not need to be in your .env file. Defines the architecture of the app, whether to start it as a monolith, microservices, only as a nextjs app, or only as an api server. Options for this would be "monolith", "microservices", "nextjs-only", "api-server-only"
 
 # NODE_ENV= <-- This is defined in your start script and would not need to be in your .env file. This determines whether NextJs is run in dev or in production. It will run the HMR (Hot Module Reloading server) when set to 'development'. When set to 'production', it will not run the HMR for better performance.
