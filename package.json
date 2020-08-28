@@ -72,7 +72,7 @@
     "jsonwebtoken": "^8.4.0",
     "jwt-decode": "^2.2.0",
     "knex": "^0.16.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.17",
     "lokijs": "^1.5.5",
     "make-promises-safe": "^4.0.0",
     "moment": "^2.23.0",
