@@ -53,7 +53,7 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "axios": "^0.18.1",
+    "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
@@ -78,7 +78,7 @@
     "moment": "^2.23.0",
     "moment-timezone": "^0.5.23",
     "morgan": "^1.9.1",
-    "next": "^7.0.2",
+    "next": "^8.0.4",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "permit": "^0.2.4",
