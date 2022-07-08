@@ -75,7 +75,7 @@
     "lodash": "^4.17.15",
     "lokijs": "^1.5.5",
     "make-promises-safe": "^4.0.0",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.23",
     "morgan": "^1.9.1",
     "next": "^7.0.2",
