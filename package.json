@@ -80,7 +80,7 @@
     "morgan": "^1.9.1",
     "next": "^7.0.2",
     "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
+    "passport-jwt": "^4.0.1",
     "permit": "^0.2.4",
     "pg": "^7.7.1",
     "react": "^16.6.3",
