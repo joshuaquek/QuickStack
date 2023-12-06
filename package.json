@@ -71,7 +71,7 @@
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.4.0",
     "jwt-decode": "^2.2.0",
-    "knex": "^0.16.3",
+    "knex": "^0.21.13",
     "lodash": "^4.17.15",
     "lokijs": "^1.5.5",
     "make-promises-safe": "^4.0.0",
